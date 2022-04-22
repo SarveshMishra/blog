@@ -5,9 +5,7 @@ class Mongodb {
 		this.createConnection();
 	}
 	createConnection() {
-		mongoose.connect(
-			`mongodb+srv://dbUser:Me%40Mongodb2021@cluster0.wz5cj.mongodb.net/users?retryWrites=true&w=majority`
-		);
+		mongoose.connect(`mongodb://localhost:27017/test`);
 		mongoose.connection.on(
 			"error",
 			console.error.bind(console, "connection error:")
